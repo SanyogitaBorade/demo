@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "siteweb": {
+    "mywebsite": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/siteweb",
+            "outputPath": "dist/mywebsite",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "siteweb:build"
+            "browserTarget": "mywebsite:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "siteweb:build:production"
+              "browserTarget": "mywebsite:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "siteweb:build"
+            "browserTarget": "mywebsite:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "siteweb:serve"
+            "devServerTarget": "mywebsite:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "siteweb:serve:production"
+              "devServerTarget": "mywebsite:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "siteweb"
+  "defaultProject": "mywebsite"
 }
